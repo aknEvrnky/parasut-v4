@@ -74,7 +74,7 @@ class Client
         $ch = curl_init();
         if (is_array($params) && $method == 'GET' && count($params) > 0) {
             $path = rtrim($path,'/');
-            $path .= '?'.http_build_query($params);
+            $path .= '&'.http_build_query($params);
         }
 
         if ($fullPath) {
